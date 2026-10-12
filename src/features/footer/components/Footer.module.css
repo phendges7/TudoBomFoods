@@ -50,7 +50,7 @@
 }
 
 .newsletter {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: var(--radius);
   background: var(--color-green);
 }

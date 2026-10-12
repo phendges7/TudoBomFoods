@@ -62,8 +62,8 @@ export function Footer() {
       </div>
       <div className={`container ${styles.bottom}`}>
         <span>
-          © {new Date().getFullYear()} Tudo de Bom Alimentos. Feito com 💚 no
-          Brasil.
+          © {new Date().getFullYear()} Tudo de Bom Alimentos. Feito com 💚 em
+          Rio Verde.
         </span>
         <span>CNPJ 00.000.000/0001-00</span>
       </div>
