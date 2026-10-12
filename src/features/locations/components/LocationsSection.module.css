@@ -1,0 +1,77 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 1.75rem 2.5rem;
+  text-align: center;
+  border: 2px solid var(--color-sand);
+  border-radius: var(--radius);
+  background: var(--color-white);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+.card:hover {
+  border-color: var(--color-yellow);
+  transform: translateY(-4px);
+}
+
+.pin {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--color-cream);
+  font-size: 1.5rem;
+}
+
+.card h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  color: var(--color-green-dark);
+}
+.card p {
+  color: var(--color-muted);
+}
+
+.flagship {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-yellow);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+}
+
+.meta {
+  margin-top: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  font-weight: 600;
+  color: var(--color-green);
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,5 @@
+import styles from './Button.module.css';
+
+export function Button({ variant = 'primary', as: Tag = 'button', className = '', ...props }) {
+  return <Tag className={`${styles.button} ${styles[variant]} ${className}`} {...props} />;
+}

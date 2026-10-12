@@ -1,0 +1,27 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.chip {
+  padding: 0.6rem 1.3rem;
+  border: 2px solid var(--color-green);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-green);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.chip:hover {
+  background: rgba(11, 93, 59, 0.08);
+}
+
+.active,
+.active:hover {
+  background: var(--color-green);
+  color: var(--color-cream);
+}

@@ -1,0 +1,129 @@
+.footer {
+  background: var(--color-green-dark);
+  color: var(--color-cream);
+  padding-top: 4rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.brand strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.brand em {
+  display: block;
+  font-style: normal;
+  color: var(--color-yellow);
+}
+.brand p {
+  max-width: 340px;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.15s ease;
+}
+.social a:hover {
+  background: var(--color-yellow);
+}
+
+.newsletter {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--color-green);
+}
+.newsletter h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-yellow);
+}
+.newsletter p {
+  margin-top: 0.25rem;
+  opacity: 0.85;
+}
+
+.form {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+.form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font: inherit;
+}
+
+.thanks {
+  margin-top: 1.25rem;
+  font-weight: 600;
+}
+
+.credits {
+  padding-bottom: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+.credits summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.credits ul {
+  margin-top: 0.75rem;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .newsletter {
+    padding: 1.5rem;
+  }
+  .newsletter h3 {
+    font-size: 1.4rem;
+  }
+  .form {
+    flex-direction: column;
+  }
+}
