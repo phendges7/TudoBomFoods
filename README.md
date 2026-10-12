@@ -8,10 +8,21 @@ Built with **React 18 + Vite** (JavaScript) using a **feature-first** folder str
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
+npm run dev      # http://localhost:3000
 npm run build    # production build in dist/
-npm run preview  # serve the production build
+npm run preview  # serve the production build at /TudoBomFoods/
 ```
+
+## Deploying to GitHub Pages
+
+Every push to `main` builds and publishes the site via
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml). One-time setup in the repo:
+**Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+The site is served from `https://<user>.github.io/TudoBomFoods/`, so `vite.config.js` sets
+`base: '/TudoBomFoods/'` for builds. If the repo is renamed, update `base` to match.
+Files in `public/` must be referenced with `import.meta.env.BASE_URL` (see
+`src/shared/data/photos.js`), not with a leading `/`.
 
 ## Project structure
 

@@ -1,6 +1,8 @@
-// Photos from Wikimedia Commons. Their licenses require crediting the author,
-// which the footer does from this list — keep `credit` filled in for every photo.
+// Photos from Wikimedia Commons (credits kept in `credit` in case they are shown again).
 // Replace with the shop's own photos whenever they're available.
+
+// Prefix with the deploy base path ("/" in dev, "/TudoBomFoods/" on GitHub Pages).
+const image = (file) => `${import.meta.env.BASE_URL}images/${file}`;
 
 const BY_SA_4 = { license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0' };
 const BY_SA_3 = { license: 'CC BY-SA 3.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0' };
@@ -8,7 +10,7 @@ const BY_SA_2 = { license: 'CC BY-SA 2.0', licenseUrl: 'https://creativecommons.
 
 export const photos = {
   coxinha: {
-    src: '/images/coxinha.jpg',
+    src: image('coxinha.jpg'),
     alt: 'Coxinha de frango cortada ao meio mostrando o recheio',
     credit: {
       author: 'Sintegrity',
@@ -17,7 +19,7 @@ export const photos = {
     },
   },
   paoDeQueijo: {
-    src: '/images/pao-de-queijo.jpg',
+    src: image('pao-de-queijo.jpg'),
     alt: 'Cesta cheia de pães de queijo dourados',
     credit: {
       author: 'Murilo Manzini',
@@ -26,12 +28,12 @@ export const photos = {
     },
   },
   esfiha: {
-    src: '/images/esfiha.jpg',
+    src: image('esfiha.jpg'),
     alt: 'Esfiha fechada assada',
     credit: { author: 'Carioca', ...BY_SA_3, source: 'https://commons.wikimedia.org/wiki/File:Sfiha.jpg' },
   },
   quibe: {
-    src: '/images/quibe.jpg',
+    src: image('quibe.jpg'),
     alt: 'Quibes fritos com recheio de queijo cremoso',
     credit: {
       author: 'E Sortica',
@@ -41,7 +43,7 @@ export const photos = {
     },
   },
   empada: {
-    src: '/images/empada.jpg',
+    src: image('empada.jpg'),
     alt: 'Bandeja de empadas de frango recém-assadas',
     credit: {
       author: 'Eduardo P',
@@ -50,7 +52,7 @@ export const photos = {
     },
   },
   enroladinho: {
-    src: '/images/enroladinho.jpg',
+    src: image('enroladinho.jpg'),
     alt: 'Enroladinho de salsicha frito',
     credit: {
       author: 'Sintegrity',
@@ -59,7 +61,7 @@ export const photos = {
     },
   },
   suco: {
-    src: '/images/suco-laranja.jpg',
+    src: image('suco-laranja.jpg'),
     alt: 'Copo de suco de laranja',
     credit: {
       author: 'USDA (edit by Arad)',
@@ -69,7 +71,7 @@ export const photos = {
     },
   },
   cafe: {
-    src: '/images/cafe.jpg',
+    src: image('cafe.jpg'),
     alt: 'Xícara de café no balcão da padaria',
     credit: {
       author: 'Wagner Tamanaha',
@@ -79,7 +81,7 @@ export const photos = {
     },
   },
   paoComOvo: {
-    src: '/images/pao-com-ovo.jpg',
+    src: image('pao-com-ovo.jpg'),
     alt: 'Pão francês com ovo mexido e uma caneca de café',
     credit: {
       author: 'Projeto Transite',

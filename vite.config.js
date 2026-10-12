@@ -2,7 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
 
-export default defineConfig({
+// GitHub Pages serves the site from https://<user>.github.io/TudoBomFoods/,
+// so builds (and `npm run preview`) use that sub-path. `npm run dev` keeps "/".
+export default defineConfig(({ command, isPreview }) => ({
+  base: command === "serve" && !isPreview ? "/" : "/TudoBomFoods/",
   plugins: [react()],
   server: {
     host: true,
@@ -15,4 +18,4 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "src/shared"),
     },
   },
-});
+}));
